@@ -7,7 +7,14 @@ public class StringAlgorithms {
      */
     public static String printCharacters(String word) {
         // TODO: Implement this method
-        return "";
+        int length = word.length();
+        String newString = " \n";
+        int n = 0;
+        while (n < length) {
+        newString = newString + word.substring(n, n + 1) + " \n";
+        n += 1;
+        }
+        return newString;
     }
 
 
@@ -18,7 +25,15 @@ public class StringAlgorithms {
      */
     public static String reverseWord(String word) {
         // TODO: Implement this method
-        return "";
+        int length = word.length();
+        int n = length - 1;
+        String newString = " \n";
+        while (n >= 0){
+        newString = newString + word.substring(n, n + 1);
+        n -= 1;
+        }
+        
+        return newString;
     }
 
 
@@ -27,10 +42,10 @@ public class StringAlgorithms {
      * Write a method that takes a String 'sentence' and returns
      * the sentence with the first letter of each word capitalized.
      */
-    public static String capitalizeString(String sentence) {
-        // TODO: Implement this method
-        return "";
-    }
+//    public static String capitalizeString(String sentence) {
+//        // TODO: Implement this method
+//        return "";
+//    }
 
 
     /**
@@ -40,6 +55,17 @@ public class StringAlgorithms {
      */
     public static boolean detectPalindrome(String word) {
         // TODO: Implement this method
+        int length = word.length();
+        int n = length - 1;
+        String newString = " \n";
+        while (n >= 0){
+        newString = newString + word.substring(n, n + 1);
+        n -= 1;
+        }
+        if (newString.equals(" \n" + word)) {
+        return true;
+        }
+        
         return false;
     }
 
@@ -50,10 +76,10 @@ public class StringAlgorithms {
      * first character that appears exactly once. If no such
      * character exists, return a space ' '.
      */
-    public static char firstUniqueChar(String word) {
-        // TODO: Implement this method
-        return ' ';
-    }
+//   public static char firstUniqueChar(String word) {
+//        // TODO: Implement this method
+//        return ' ';
+//    }
 
 
     /**
@@ -64,23 +90,24 @@ public class StringAlgorithms {
 
         // TODO: Add test calls for each challenge method
         
-        System.out.println("Testing printCharacters:");
+        System.out.println(printCharacters("hello"));
         // Example:
         // System.out.println(printCharacters("hello"));
 
-        System.out.println("\nTesting reverseWord:");
+        System.out.println(reverseWord("hello"));
         // Example:
         // System.out.println(reverseWord("hello"));
 
-        System.out.println("\nTesting capitalizeString:");
+//        System.out.println("\nTesting capitalizeString:");
         // Example:
         // System.out.println(capitalizeString("the quick brown fox"));
 
-        System.out.println("\nTesting detectPalindrome:");
+        System.out.println(detectPalindrome("racecar"));
+        System.out.println(detectPalindrome("hello"));
         // Example:
         // System.out.println(detectPalindrome("racecar"));
 
-        System.out.println("\nTesting firstUniqueChar:");
+//        System.out.println("\nTesting firstUniqueChar:");
         // Example:
         // System.out.println(firstUniqueChar("swiss"));
     }
