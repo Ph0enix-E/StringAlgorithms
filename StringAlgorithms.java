@@ -8,13 +8,13 @@ public class StringAlgorithms {
     public static String printCharacters(String word) {
         // TODO: Implement this method
         int length = word.length();
-        String newString = " \n";
+        String newString = "q";
         int n = 0;
         while (n < length) {
-        newString = newString + word.substring(n, n + 1) + " \n";
+        newString = newString + word.substring(n, n + 1) + "\n";
         n += 1;
         }
-        return newString;
+        return newString.substring(1);
     }
 
 
@@ -27,13 +27,13 @@ public class StringAlgorithms {
         // TODO: Implement this method
         int length = word.length();
         int n = length - 1;
-        String newString = " \n";
+        String newString = "q";
         while (n >= 0){
         newString = newString + word.substring(n, n + 1);
         n -= 1;
         }
         
-        return newString;
+        return newString.substring(1);
     }
 
 
@@ -55,6 +55,7 @@ public class StringAlgorithms {
      */
     public static boolean detectPalindrome(String word) {
         // TODO: Implement this method
+        word = word.substring(0, 1).toLowerCase() + word.substring(1);
         int length = word.length();
         int n = length - 1;
         String newString = " \n";
@@ -65,6 +66,7 @@ public class StringAlgorithms {
         if (newString.equals(" \n" + word)) {
         return true;
         }
+
         
         return false;
     }
@@ -89,7 +91,7 @@ public class StringAlgorithms {
     public static void main(String[] args) {
 
         // TODO: Add test calls for each challenge method
-        
+
         System.out.println(printCharacters("hello"));
         // Example:
         // System.out.println(printCharacters("hello"));
@@ -103,6 +105,7 @@ public class StringAlgorithms {
         // System.out.println(capitalizeString("the quick brown fox"));
 
         System.out.println(detectPalindrome("racecar"));
+        System.out.println(detectPalindrome("Racecar"));
         System.out.println(detectPalindrome("hello"));
         // Example:
         // System.out.println(detectPalindrome("racecar"));
