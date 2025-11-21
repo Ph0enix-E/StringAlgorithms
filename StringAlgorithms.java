@@ -11,10 +11,10 @@ public class StringAlgorithms {
         String newString = "q";
         int n = 0;
         while (n < length) {
-        newString = newString + word.substring(n, n + 1) + "\n";
+        newString = newString + "\n" + word.substring(n, n + 1);
         n += 1;
         }
-        return newString.substring(1);
+        return newString.substring(2);
     }
 
 
