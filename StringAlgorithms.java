@@ -8,13 +8,13 @@ public class StringAlgorithms {
     public static String printCharacters(String word) {
         // TODO: Implement this method
         int length = word.length();
-        String newString = "q";
+        String newString = "";
         int n = 0;
         while (n < length) {
         newString = newString + word.substring(n, n + 1) + "\n";
         n += 1;
         }
-        return newString.substring(1);
+        return newString;
     }
 
 
@@ -27,13 +27,13 @@ public class StringAlgorithms {
         // TODO: Implement this method
         int length = word.length();
         int n = length - 1;
-        String newString = "q";
+        String newString = "";
         while (n >= 0){
         newString = newString + word.substring(n, n + 1);
         n -= 1;
         }
         
-        return newString.substring(1);
+        return newString;
     }
 
 
@@ -106,7 +106,7 @@ public class StringAlgorithms {
 
         System.out.println(detectPalindrome("racecar"));
         System.out.println(detectPalindrome("Racecar"));
-        System.out.println(detectPalindrome("hello"));
+        System.out.println(detectPalindrome("Java"));
         // Example:
         // System.out.println(detectPalindrome("racecar"));
 
